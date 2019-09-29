@@ -2,29 +2,49 @@ package com.company.Controller;
 
 import com.company.Dao.GeneralDao;
 import com.company.model.Book;
-import com.company.model.Publisher;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import static java.lang.Integer.parseInt;
 
 public class BookServices {
-    File bookFile = new File("book.txt");
-    File authFile = new File ("author.txt");
-    File pubFile = new File("publisher.txt");
+    private File bookFile = new File("book.txt");
+    private File authFile = new File ("author.txt");
+    private File pubFile = new File("publisher.txt");
 
-
-    GeneralDao bookDao = new GeneralDao();
-    Services authActions = new Services();
-    PublisherServices pubAction = new PublisherServices();
-
+    private GeneralDao bookDao = new GeneralDao();
+    private AuthorServices authActions = new AuthorServices();
+    private PublisherServices pubAction = new PublisherServices();
     private RandomID randomBookId = new RandomID();
-    Book book = new Book();
-    List<String> bookList = new ArrayList<>();
 
+    private Book book = new Book();
+
+    public void addBook() throws IOException {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Write the name of the book you want to add");
+        book.setBookName(scanner.nextLine());
+        book.setBookId(randomBookId.getRandomID(bookFile));
+        book.setAuthorId(authActions.AUthorsID);
+        book.setPublisherId(pubAction.PublisherID);
+
+        try {
+            PrintWriter bookOutput = new PrintWriter(new FileWriter(bookFile, true));
+            bookOutput.println(
+                    book.getBookId() + "," +
+                            book.getBookName() + "," +
+                            book.getAuthorId() + ","+
+                            book.getPublisherId());
+            bookOutput.flush();
+            bookOutput.close();
+
+        }
+        catch (IOException ex)
+        {
+            System.out.println("ERROR: " + ex);
+        }
+
+    }
     public  void addBookNewPublisher() throws IOException {
         Scanner scanner = new Scanner(System.in);
         System.out.println("----------------------New Publisher Must be added first--------------------------------");
@@ -41,31 +61,7 @@ public class BookServices {
         scanner.nextLine();
         authActions.addAuthor();
     }
-    public void addBook() throws IOException {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Write the name of the book you want to add");
-        book.setBookName(scanner.nextLine());
-        book.setBookId(randomBookId.getRandomID(bookFile));
-        book.setAuthorId(authActions.AUthorsID);
-        book.setPublisherId(pubAction.PublisherID);
 
-        try {
-            PrintWriter bookOutput = new PrintWriter(new FileWriter(bookFile, true));
-            bookOutput.println(
-                    book.getBookId() + "," +
-                    book.getBookName() + "," +
-                    book.getAuthorId() + ","+
-                    book.getPublisherId());
-            bookOutput.flush();
-            bookOutput.close();
-
-        }
-        catch (IOException ex)
-        {
-            System.out.println("ERROR: " + ex);
-        }
-
-    }
     public void addBookExistingAuthPub() throws IOException {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Write the name of the book you want to add");
@@ -74,26 +70,40 @@ public class BookServices {
         book.setBookId(randomBookId.getRandomID(bookFile));
 
         System.out.println("Enter the Author ID of the book: " + book.getBookName());
-        book.setAuthorId(scanner.nextInt());
-        if (!bookDao.doesExist(authFile, book.getAuthorId()))
+        try{
+            book.setAuthorId(scanner.nextInt());
+            if (!bookDao.doesExist(authFile, book.getAuthorId()))
+            {
+                System.out.println("----------------------------------------");
+                System.out.println("     Could not Add Book Using this ID");
+                System.out.println("----------------------------------------");
+                return;
+            }
+        } catch (InputMismatchException ime)
         {
-            System.out.println("----------------------------------------");
-            System.out.println("     Could not Add Book Using this ID");
-            System.out.println("----------------------------------------");
-            System.out.println("        Press [Enter] to continue.   ");
+            System.out.println("Cannot not use this input as Author ID");
+            return;
         }
+
+
         scanner.nextLine();
 
         System.out.println("Enter the Publisher ID of the book: " + book.getBookName());
-        book.setPublisherId(scanner.nextInt());
-        if (!bookDao.doesExist(pubFile, book.getPublisherId()))
-        {
-            System.out.println("----------------------------------------");
-            System.out.println("     Could not Add Book Using this ID");
-            System.out.println("----------------------------------------");
-            System.out.println("        Press [Enter] to continue.   ");
+        try{
+            book.setPublisherId(scanner.nextInt());
+            if (!bookDao.doesExist(pubFile, book.getPublisherId()))
+            {
+                System.out.println("----------------------------------------");
+                System.out.println("     Could not Add Book Using this ID");
+                System.out.println("----------------------------------------");
+                return;
 
+            }
+        } catch (InputMismatchException ime)
+        {
+            System.out.println("Cannot not use this input as Publisher ID ");
         }
+
         scanner.nextLine();
 
         try {

@@ -1,17 +1,19 @@
 package com.company.view;
 
+import com.company.Controller.AuthorServices;
 import com.company.Controller.BookServices;
 import com.company.Controller.PublisherServices;
-import com.company.Controller.Services;
 
 import java.io.IOException;
 import java.util.Scanner;
 
 public class Menu
 {
-    BookServices bookActions = new BookServices();
-    PublisherServices publisherActions = new PublisherServices();
-    Services action = new Services();
+    private BookServices bookActions = new BookServices();
+    private PublisherServices publisherActions = new PublisherServices();
+    private AuthorServices authorAction = new AuthorServices();
+
+
     public void runMenu ()
     {
         showHeader();
@@ -81,6 +83,9 @@ public class Menu
 
     }
 
+    // The UI section of the application
+    // The UI section of the application
+    // The UI section of the application
     public void showHeader ()
     {
         System.out.println("_______________________________________");
@@ -172,6 +177,9 @@ public class Menu
         System.out.println("|   3)List Publishers                      |");
         System.out.println("|__________________________________________|");
     }
+
+    // Menu Systems for All the menu's in the Application
+    //Uses switch statements with cases that call the methods above
     private void preformMenuAction(int choices)
     {
         switch (choices){
@@ -229,7 +237,7 @@ public class Menu
                 runNewBookPubMenu();
                 break;
             case 3:
-                action.listAuthor();
+                authorAction.listAuthor();
                 System.out.println("------------------Authors------------------");
                 runNewBookAuthMenu();
                 break;
@@ -259,19 +267,19 @@ public class Menu
                 runMenu();
                 break;
             case 1:
-                action.addAuthor();
+                authorAction.addAuthor();
                 runAuthMenu();
                 break;
             case 2:
-                action.removeAuthor();
+                authorAction.removeAuthor();
                 runAuthMenu();
                 break;
             case 3:
-                action.updateAuthor();
+                authorAction.updateAuthor();
                 runAuthMenu();
                 break;
             case 4:
-                action.listAuthor();
+                authorAction.listAuthor();
                 runAuthMenu();
                 break;
             default:

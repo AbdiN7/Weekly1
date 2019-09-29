@@ -11,9 +11,8 @@ public class PublisherServices {
     private RandomID randomPublisherID = new RandomID();
     GeneralDao publisherDao = new GeneralDao();
     private Publisher publisher = new Publisher();
-    List<String> publisherList = new ArrayList<>();
-
     Integer PublisherID;
+
     public void addPublisher() throws IOException {
         Scanner scanner = new Scanner(System.in);
         System.out.println("What is the Name of the Publisher you wish to add?");

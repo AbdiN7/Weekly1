@@ -1,7 +1,6 @@
 package com.company.Dao;
 
 import java.io.*;
-import java.util.HashSet;
 import java.util.Scanner;
 
 import static java.lang.Integer.parseInt;
@@ -15,7 +14,6 @@ public class GeneralDao {
         BufferedReader reader = new BufferedReader(new FileReader(bookFile));
         BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
 
-        Scanner scanner = new Scanner(System.in);
         String currentLine;
         while ((currentLine = reader.readLine()) != null)
         {
@@ -31,6 +29,7 @@ public class GeneralDao {
         boolean successful = tempFile.renameTo(bookFile);
     }
 
+    // Used to list All books / authors / publishers depending on which one is set as a parameter.
     public void List(File name) throws IOException {
         File bookFile = new File("book.txt");
         File authFile = new File("author.txt");
@@ -50,10 +49,10 @@ public class GeneralDao {
 
     }
 
+    // Searches Either Author / Publisher file  for IDs, when user is adding a book with an existing author / publisher
     public boolean doesExist(File filename,int authorID) throws IOException {
         File authFile = new File("author.txt");
         File pubFile = new File("publisher.txt");
-
 
         boolean isExist = false;
         BufferedReader reader = new BufferedReader(new FileReader(filename));

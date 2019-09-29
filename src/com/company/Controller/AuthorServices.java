@@ -9,7 +9,7 @@ import java.util.*;
 
 public class AuthorServices {
     private File authFile = new File("author.txt");
-    GeneralDao authorDao = new GeneralDao();
+    private GeneralDao authorDao = new GeneralDao();
     private RandomID randomAuthorID = new RandomID();
     private Author newAuth = new Author();
 
@@ -38,6 +38,10 @@ public class AuthorServices {
         System.out.println("------------------  ["+newAuth.getAuthorName() + "'s] ID is [" + newAuth.getAuthorId() + "]  ------------------") ;
         System.out.println("----------------------------------------------------------------------------------");
     }
+
+    ////// REMOVING ///////
+    ////// REMOVING ///////
+    ////// REMOVING ///////
     public void removeAuthor() throws IOException {
         File tempFile = new File("tempAuthor.txt");
 
@@ -63,6 +67,9 @@ public class AuthorServices {
         boolean successful = tempFile.renameTo(authFile);
         return;
     }
+    //////// UPDATE ///////
+    //////// UPDATE ///////
+    //////// UPDATE ///////
     public void updateAuthor() throws IOException {
         File tempFile = new File("tempAuthor.txt");
 
@@ -97,6 +104,10 @@ public class AuthorServices {
         boolean successful = tempFile.renameTo(authFile);
         return;
     }
+
+    //// LIST ////
+    //// LIST ////
+    //// LIST ////
     public void listAuthor () throws IOException {
         authorDao.List(authFile);
     }

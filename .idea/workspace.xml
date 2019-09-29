@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="98c63fdd-d6cd-4bc5-b2d5-fff62aef2ab1" name="Default Changelist" comment="" />
+    <list default="true" id="98c63fdd-d6cd-4bc5-b2d5-fff62aef2ab1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/author.txt" beforeDir="false" afterPath="$PROJECT_DIR$/author.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book.txt" beforeDir="false" afterPath="$PROJECT_DIR$/book.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WeekTest1/com/company/Controller/BookServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WeekTest1/com/company/Controller/BookServices.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WeekTest1/com/company/Controller/PublisherServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WeekTest1/com/company/Controller/PublisherServices.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WeekTest1/com/company/Controller/Services.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WeekTest1/com/company/Dao/BookDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WeekTest1/com/company/Dao/GeneralDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WeekTest1/com/company/Dao/GeneralDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WeekTest1/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WeekTest1/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WeekTest1/com/company/model/Author.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WeekTest1/com/company/model/Author.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WeekTest1/com/company/view/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WeekTest1/com/company/view/Menu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/publisher.txt" beforeDir="false" afterPath="$PROJECT_DIR$/publisher.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Controller/AuthorServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Controller/AuthorServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Controller/BookServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Controller/BookServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Controller/PublisherServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Controller/PublisherServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Dao/GeneralDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Dao/GeneralDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/model/Author.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/model/Author.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/view/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/view/Menu.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,10 +38,14 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1RIVGfTuWE8fiUeTrD6kVRmKzJh" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -77,11 +101,23 @@
       <workItem from="1569597624192" duration="7659000" />
       <workItem from="1569606937875" duration="29000" />
       <workItem from="1569618774785" duration="173000" />
-      <workItem from="1569692859616" duration="26570000" />
+      <workItem from="1569692859616" duration="27170000" />
+      <workItem from="1569786921740" duration="3961000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
