@@ -10,6 +10,9 @@ After Starting the program you will be introduced to a menu in the console askin
 
 [Features]
  --This program is will have a small footprint overall on the user's computer
+ 
  --Follows the linux philosophy "Do one thing and Do it well / store data in small flat text file"
+ 
  --Because of it's light-weight it is also extreamly fast. moves as fast as you can type.
+ 
  --Organized neatly, objects names are readble, relatively scaleable
