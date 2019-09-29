@@ -7,7 +7,7 @@ import com.company.model.Author;
 import java.io.*;
 import java.util.*;
 
-public class Services {
+public class AuthorServices {
     private File authFile = new File("author.txt");
     GeneralDao authorDao = new GeneralDao();
     private RandomID randomAuthorID = new RandomID();
